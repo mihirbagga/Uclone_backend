@@ -1,0 +1,1058 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>Hi {{name}} </title><style>
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 3px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	text-indent: -1.7em;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+.simple-table {
+	margin-top: 1em;
+	font-size: 0.875rem;
+	empty-cells: show;
+}
+.simple-table td {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table th {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table-header-color {
+	background: rgb(247, 246, 243);
+	color: black;
+}
+.simple-table-header {
+	font-weight: 500;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-block;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	max-height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1.25em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.highlight-default {
+	color: rgba(55, 53, 47, 1);
+}
+.highlight-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.highlight-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.highlight-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.highlight-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.highlight-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.highlight-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.highlight-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.highlight-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.highlight-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.highlight-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.highlight-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.highlight-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.highlight-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.highlight-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.highlight-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.highlight-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.highlight-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.highlight-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.block-color-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.block-color-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.block-color-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.block-color-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.block-color-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.block-color-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.block-color-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.block-color-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.block-color-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.block-color-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.block-color-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.block-color-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.block-color-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.block-color-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.block-color-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.block-color-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.block-color-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.select-value-color-pink { background-color: rgba(245, 224, 233, 1); }
+.select-value-color-purple { background-color: rgba(232, 222, 238, 1); }
+.select-value-color-green { background-color: rgba(219, 237, 219, 1); }
+.select-value-color-gray { background-color: rgba(227, 226, 224, 1); }
+.select-value-color-opaquegray { background-color: rgba(255, 255, 255, 0.0375); }
+.select-value-color-orange { background-color: rgba(250, 222, 201, 1); }
+.select-value-color-brown { background-color: rgba(238, 224, 218, 1); }
+.select-value-color-red { background-color: rgba(255, 226, 221, 1); }
+.select-value-color-yellow { background-color: rgba(253, 236, 200, 1); }
+.select-value-color-blue { background-color: rgba(211, 229, 239, 1); }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="7044f768-4377-4d47-bd99-37d7df22a7a0" class="page sans"><header><h1 class="page-title">Hi {{name}} </h1></header><div class="page-body"><p id="8a50d7d7-f620-4477-96f0-281848efd8bb" class="">
+</p><figure id="408e9ce1-bdc9-4410-8f1d-3ef4e2d04430" class="image"><a href="{{video_url}}"><img style="width:1256px" src="static/{{name}}.png"/></a></figure><h2 id="e7b4be95-9cb4-4f24-aed0-5029e21967d1" class="">I find this hard to believe myself but here it is..
+</h2><p id="77026ffe-fdfd-403a-aa7f-6b5e39949cf3" class="">What if you could <span style="border-bottom:0.05em solid"><strong>unlock enormous value in your lead generation and sales process with no extra work at zero to low cost</strong></span> via brand new <strong><span style="border-bottom:0.05em solid">AI technology</span></strong> that allows you to connect with high-quality clients you never thought was possible without spending a dollar on paid ads?</p><p id="0e933a26-2269-446b-8273-509eacaea8c5" class="">
+</p><figure id="e3979d51-2acb-4720-b5de-906445ebb176" class="image"><a href="static/IMG_0255.jpg"><img style="width:480px" src="static/IMG_0255.jpg"/></a></figure><p id="e9a7495e-7568-4f5c-94b0-56e825a7d4ac" class="">
+I have seen first hand what <span style="border-bottom:0.05em solid">not having an automated high quality consistent lead generation system</span> does to business owners. 
+
+It destroys them. I know because I lived this agony for years myself. 
+
+The frustration and pain that I actually had a fantastic product and service that solved a <span style="border-bottom:0.05em solid">specific and exact problem for my niche</span>, and yet no way to get the message out to my specific market at scale. 
+</p><p id="0777f05b-dccc-4fcc-8559-872e0afbbbe9" class=""><strong>Most people think there is something wrong with them about why their business isn&#x27;t making the amount of money it should be, but in actuality it’s because </strong><span style="border-bottom:0.05em solid"><strong>obscurity is the reason why almost all businesses fail.</strong></span></p><p id="0bbe140e-29b5-4b72-a58b-4e320d01d3c0" class="">
+</p><p id="a530fa46-e368-4bec-941f-f48b55340a80" class="">No one knows who they are!
+
+If you&#x27;re not seeing the lead generation and sales you deserve it’s simply because not enough people know about you. <span style="border-bottom:0.05em solid">It&#x27;s not your fault</span>.</p><p id="11a7dbd6-0916-4ac1-b176-b95a87ec165c" class="">How could it be?</p><p id="4c52a157-35c5-4200-8398-e31743fce149" class="">You don&#x27;t yet have a simple, powerful and free way of <span style="border-bottom:0.05em solid"><strong>scaling your attention
+
+</strong></span><span style="border-bottom:0.05em solid">But it no longer needs to be that way.</span></p><p id="9881a9af-1d8c-4267-936d-df66cb9768b1" class="">
+</p><figure id="546d5282-d000-42dd-a738-bc2d5ae8dcf4" class="image"><a href="static/unnamed.png"><img style="width:336px" src="static/unnamed.png"/></a></figure><p id="f07bd04f-e051-4814-b950-0386e27b8ea8" class="">
+Because with brand new pioneering AI technology entrepreneurs and business owners <span style="border-bottom:0.05em solid"><strong>can now generate attention for free</strong></span> which when combined with the correct first principle systems can <span style="border-bottom:0.05em solid"><strong>massively scale that free attention.</strong></span>
+
+<strong>A brand new automated organic client generating machine using Open AI, ChatGPT &amp; WhatsApp that creates massive attention </strong><span style="border-bottom:0.05em solid"><strong>for free, and scales that free attention indefinitely. 
+
+</strong></span>With +10 years in business I have <span style="border-bottom:0.05em solid">never ever seen</span> an opportunity like this, until now. </p><p id="d693dd9a-8521-4d57-900c-5eb75cd988b7" class="">It’s a once in generational moment where brand new AI technology has finally matched what most thought was sci-fi.<strong></strong>
+</p><figure id="d181c680-0e14-441f-9d95-e380ec6da485" class="image"><a href="static/Screenshot_2023-03-07_at_13.54.46.png"><img style="width:1904px" src="static/Screenshot_2023-03-07_at_13.54.46.png"/></a></figure><p id="877de101-6b97-4d36-8b6d-7e000e7db612" class="">
+<strong>Imagine finding and converting attention at zero to low cost per acquisition on autopilot for your business in the next few weeks or even days from now..
+</strong></p><ul id="87e82fa0-d2c3-4815-9ccf-5a10536d9e2d" class="bulleted-list"><li style="list-style-type:disc">Without expensive paid advertising </li></ul><ul id="80a263bf-800e-47dc-8fba-e885726a21aa" class="bulleted-list"><li style="list-style-type:disc">Without expensive ad agencies</li></ul><ul id="306ab275-6a2b-4156-a1ab-07171a26dc33" class="bulleted-list"><li style="list-style-type:disc">Without soul destroying time sucking sales calls</li></ul><ul id="043ce84d-2368-430e-9381-5c9c0bdfe4a4" class="bulleted-list"><li style="list-style-type:disc">Without painfully annoying to hire and manage sales reps who constant want your hard earned net as their commissions </li></ul><ul id="5d1e1854-7fec-4108-ae99-17e30b3bd6ba" class="bulleted-list"><li style="list-style-type:disc">Without complicated funnels</li></ul><ul id="47bfcc89-1316-4ec6-beca-88eaad48a7e0" class="bulleted-list"><li style="list-style-type:disc">Without fake discounts </li></ul><ul id="18ebebd7-1e7d-49b0-a336-744634da518e" class="bulleted-list"><li style="list-style-type:disc">Without totally unrealistic “guarantees”</li></ul><ul id="357bd3f9-8ac6-4855-a21e-c7e627d4c293" class="bulleted-list"><li style="list-style-type:disc">Without split payments </li></ul><p id="fba11c2e-f8ff-406d-b9a7-98275fe4c057" class="">
+Shall I go on..
+
+It sounds too good to be true doesn’t it?</p><p id="42eebe4d-7e12-4efd-933d-443a0908f7f1" class="">I totally get it. </p><p id="a968e1ad-ab18-414c-8036-22dc86393c24" class="">For someone who has spent +$30,000 USD per month on paid advertising for years I was the most skeptical about an alternative way, and yet this is my now clients and I existence..</p><p id="932995d5-30d3-4d93-937c-3c445cbc2977" class="">
+</p><figure id="c3391660-0d9b-4770-acba-f9d59f5b383b" class="image"><a href="static/IMG_9547.jpg"><img style="width:336px" src="static/IMG_9547.jpg"/></a></figure><p id="ca3220a5-afbc-4bce-bea0-4a675692f0f2" class="">
+</p><p id="190b233d-57a1-41b9-8dd0-a424c4c0c899" class="">Those that aren’t in a position to spend money to acquire clients have <strong>always been previously penalised</strong> haven’t they? Because they’ve not had large resources to constantly spend on the hamster wheel of <span style="border-bottom:0.05em solid">paid advertising</span>.</p><p id="10369aa5-b8e0-43fa-8e56-b8b6ce006d5a" class="">
+Well-meant entrepreneurs, coaches and consultants were shut out of the riches left to a minority whom are already established and spending +10k, 20k +30k per month on paid ads without even having to think about it. 
+
+This is made worse by the fact they believe they need to spend countless hours making youtube videos, answering questions in facebook groups hoping to get noticed or “pounding the pavements” making cold calls to get clients. Or they waste time doing “content marketing” and building complex sales funnels hoping and praying that new clients come to them.</p><p id="73279ff8-0f7a-4154-b3c2-499808ae5433" class="">
+</p><p id="67000da6-b3df-42e5-8a45-69ee9b56a58d" class="">I call this <strong>&quot;The Void&quot;</strong>
+</p><figure id="f3ff86e7-8f5a-4873-9101-f73f8b535adf" class="image"><a href="static/Screenshot_2023-03-01_at_10.46.21.png"><img style="width:704px" src="static/Screenshot_2023-03-01_at_10.46.21.png"/></a></figure><p id="c142295f-7f73-4317-8e57-9e563ff39d42" class="">
+</p><p id="21516db5-d8e2-402e-b1da-6161fe0b3506" class="">It&#x27;s painful, common (the norm) and pulls well-intended business owners away from the important things they should be doing which is providing value, experiences and results for those they serve.  </p><p id="a23321b7-4f6d-4895-8aaf-f4bd46bb14f0" class="">
+</p><p id="b703fb95-553f-4c99-9a5e-4d7cb7028984" class="">But now imagine instead a <span style="border-bottom:0.05em solid"><strong>simple automated organic client generating machine that works for you at zero to low cost.</strong></span></p><figure id="98fe7466-1317-4f9c-b857-c488dce0fc09" class="image"><a href="static/Screenshot_2023-02-28_at_09.03.50.png"><img style="width:864px" src="static/Screenshot_2023-02-28_at_09.03.50.png"/></a></figure><p id="f169aecd-3689-40dc-8f48-ac2fc052c2a2" class="">
+<strong>A simple but powerful system that revolutionise your sales process without time sucking sales calls and expensive sales reps. Generating high value leads and acquire clients on autopilot with powerful brand new technologies of AI, ChatGPT &amp; WhatsApp.
+</strong></p><p id="f9a92ffe-73a3-43cf-8d5f-2746081f017d" class=""><strong><span style="border-bottom:0.05em solid">It has become the single most important success factor today in 2023 to generate attention for free, than it is to spend money to acquire attention (expensive paid ads and alike).</span></strong></p><p id="544d1386-faf4-4e19-9e55-ee156b2820d3" class="">
+</p><p id="d41b43c3-ad04-4651-b548-197e70ab9db2" class="">Ad agencies and large platforms don’t want you to realise this. They want you trapped into the old way don’t they? Of course they do, it’s how they make their cashflow! It doesn’t make them bad or evil, <span style="border-bottom:0.05em solid">but a fact non the less.</span></p><p id="1a66f7bb-b5ba-477b-9b15-49eea5e882c6" class="">
+</p><p id="b5def788-def0-45ac-b793-fd49f8fa2446" class="">This used to force entrepreneurs to have to ‘play ball’ to their systems whilst filling their banks accounts, <span style="border-bottom:0.05em solid">but everything has now changed with the AI forever</span>.
+
+But in order for you to access and use this powerful <span style="border-bottom:0.05em solid">brand new AI based technology</span> you first need the correct <span style="border-bottom:0.05em solid">first principle system</span> in place to scale that technology, so that you can have your own organic client generating machine in your business too. </p><p id="81f4e318-5ae2-4971-8265-d9998f44e237" class="">
+</p><p id="b75e32dc-0ff3-4975-a714-ac2ca413e526" class=""><span style="border-bottom:0.05em solid"><strong>You can’t have one without the other.</strong></span> </p><p id="c54ccf5e-c1b7-45ed-a8fb-53eb73ae7553" class="">
+</p><figure id="adf04ad9-7ce2-4ac6-8608-f1a42f10f408" class="image"><a href="static/Most_Attractive_Youtube_Thumbnail_(14).png"><img style="width:2560px" src="static/Most_Attractive_Youtube_Thumbnail_(14).png"/></a></figure><p id="85889da9-b78d-492f-aa6b-908e00b4fd97" class=""><strong>
+Before we get to that brand new </strong><span style="border-bottom:0.05em solid"><strong>first principle system</strong></span><strong>, there are 3 specific and exact criteria that allows my clients businesses to be</strong><span style="border-bottom:0.05em solid"><strong> simple to run and stacked with net cash flow</strong></span><strong>
+
+</strong>Because without first understanding these 3 criteria, the technology just won’t work. <strong>
+
+Let’s cover each now..</strong></p><p id="b1b3aae1-8d78-4829-ad47-4b169ef0a87f" class="">
+</p><figure id="12710ee6-c33b-40f4-b8f6-f42421393358" class="image"><a href="static/Screenshot_2023-02-25_at_19.41.32.png"><img style="width:896px" src="static/Screenshot_2023-02-25_at_19.41.32.png"/></a></figure><h2 id="de186161-797a-4260-87b5-3d7e6e27bc88" class="">1. <strong> Build a war chest of net cash flow of 100,000 USD quickly simply and easily.</strong></h2><p id="f38e3ab3-779f-40a7-9b2b-811d16e507ae" class="">
+It’s incredible to me that most entrepreneurs don’t have a war chest of cash building year on year at all times. By definition your not the norm as a business owner, and that means <span style="border-bottom:0.05em solid">new cash flow standards</span> are mandatory for you, compared to civilians.  </p><p id="7b6df6a5-29c4-4d07-90a2-b2cfe9e8f070" class="">
+</p><p id="e6a6c787-8a3e-4701-867c-bfa3766add16" class="">Because you can’t do anything remotely important or impactful long term today in business without building a starting <span style="border-bottom:0.05em solid"><strong>war chest of net cash reserves (the stuff after tax) sitting in one singular bank account at all times</strong></span>. </p><p id="14c388bc-616f-4c8f-a5e9-2e1e21e9f0b1" class="">
+</p><p id="75f6cc0e-7cb2-4e90-a3a1-d02476bfdc21" class="">This is the absolute minim standard today in 2023.  
+
+Anyone that says any different to you immediately run. They are what I term suffering from a <span style="border-bottom:0.05em solid">foot fetish like revenue delusion</span>. These types are dangerous. They talk a big game about the numbers their making, but not the actual <span style="border-bottom:0.05em solid"><strong>take home net</strong></span> (which is difficult for them as they’ve chosen to build businesses that actively destroy all their profits) haven’t they?</p><p id="1cf6df70-510b-4516-847f-30c59515fd32" class="">
+</p><p id="e5a5f6bf-c7b4-4cf6-b484-9d6f0a25f1e6" class="">We know that’s true as they constantly have to pay out tens of thousands of dollars per month on expensive paid ads either <span style="border-bottom:0.05em solid">their trying to run themselves</span> or paying even more money for <span style="border-bottom:0.05em solid">ad agencies to run those ads</span>, and/or hiring annoying to manage <span style="border-bottom:0.05em solid">sales reps who constantly want more of your hard earned net for their commissions</span>. It’s a vicious cycle. </p><p id="36ebbcb1-8ae4-4655-950a-ca763921106d" class="">
+</p><p id="e42e4906-7a2f-46f8-80b6-bf40b101a4cf" class="">Avoid these types at all costs. They will ruin you. </p><p id="307ebf8e-7145-4743-a99a-b3b6e03d34b2" class="">
+</p><p id="3f6bdad7-0049-4517-be45-277ce12dc4e3" class="">Always focus on net. </p><p id="a9c0a4ad-2b79-41dc-ab3c-fa76e9a6be8b" class=""><span style="border-bottom:0.05em solid">We’ll show you exactly how</span> with embedding a simple and powerful zero to low cost AI automated organic client generating machine in your business.</p><p id="2c9bfbbb-0b91-44ed-81fe-55aaf77f9a56" class="">
+</p><div id="a3deb80b-7f54-4f7e-9086-7849ac4964b8" class="column-list"><div id="afbe1510-341b-449a-86d6-ddf01d1190b6" style="width:56.25%" class="column"><figure id="e42b5b7b-0087-4bd9-865a-d53286d7e0bc" class="image"><a href="static/Screenshot_2023-03-02_at_12.47.02.png"><img style="width:530px" src="static/Screenshot_2023-03-02_at_12.47.02.png"/></a></figure></div><div id="04cf1b01-b085-499b-ad00-e18fbc23f19e" style="width:43.75000000000001%" class="column"><figure id="ef2ca0fd-401d-49fd-90ae-5fde75442bd5" class="image"><a href="static/Screenshot_2023-02-24_at_09.11.53.png"><img style="width:240px" src="static/Screenshot_2023-02-24_at_09.11.53.png"/></a></figure></div></div><p id="06a3b989-c0a3-413e-bd9e-4a47c031f86d" class=""><strong><em>Figure</em></strong><em>: </em><span style="border-bottom:0.05em solid"><em>Net, not revenue</em></span><em>, because go figure, I’m not wasting cash flow on expensive paid ads and agencies lol. I do it “myself”, with brand new AI technology that works for me as a system and machine, as it does for my clients, and </em><em><span style="border-bottom:0.05em solid">we’ll show you exactly how too. </span></em><strong>
+</strong></p><figure id="b41aa9ad-0d8c-4804-b0db-01e6e6bda08c" class="image"><a href="static/Screenshot_2023-02-25_at_19.20.36.png"><img style="width:844px" src="static/Screenshot_2023-02-25_at_19.20.36.png"/></a></figure><h2 id="8bcda78b-5c77-449d-86d7-e55237bac3d7" class="">2. <strong> Generate Attention For Free &amp; On Autopilot. </strong></h2><p id="30146cc2-3a2b-411a-b74e-a3ad34ddaaca" class=""><strong>
+</strong>There are only <span style="border-bottom:0.05em solid">3 ways to grow a business</span>: 
+</p><ol type="1" id="8f0044fd-6267-4c5b-8e60-a2541b3959c1" class="numbered-list" start="1"><li><strong>Consistently get more clients</strong></li></ol><ol type="1" id="bda1a52d-338b-4ae3-a537-b63d1745744e" class="numbered-list" start="2"><li><strong>Increase your prices</strong></li></ol><ol type="1" id="5fb7b09d-972b-4d45-ace0-c94ca040553e" class="numbered-list" start="3"><li><strong>Provide a way for your clients to pay you year after year with the correct business model </strong></li></ol><p id="df336965-74ee-49f8-b08d-325b5cf13ed8" class="">
+It’s that simple. 
+
+And yet most (including myself years ago) over complicate everything and up dead, broke or poor because they don’t understand that without <span style="border-bottom:0.05em solid">consistent clean high quality lead flow</span> coming into your business like an automated machine each week, your NEVER EVER going to achieve the first standard of <span style="border-bottom:0.05em solid"><strong>an absolute minim +$100,000 USD net war chest after tax at all times</strong></span>. 
+</p><p id="f2679736-bb62-4e4e-81ad-f33840cc714e" class="">
+</p><figure id="7f17f6bf-55bb-4af8-a991-e6490b4b60ac" class="image"><a href="static/Screenshot_2023-02-26_at_12.57.25.png"><img style="width:384px" src="static/Screenshot_2023-02-26_at_12.57.25.png"/></a></figure><p id="231f0d32-1edd-4dcf-a023-d2e8eb83448a" class="">
+</p><p id="31b60450-c857-4834-815d-a711b4c07ef2" class="">Listen to me now as this sentence <span style="border-bottom:0.05em solid">will change your life if you internalise.</span> I’ll say it 3 times so it sinks the f**** in. Repeat after me..
+
+<strong>$100K is the absolute minim standard of cash in your bank as a default setting today in 2023
+$100K is the absolute minim standard of cash in your bank as a default setting today in 2023
+$100K is the absolute minim standard of cash in your bank as a default setting today in 2023
+</strong>
+Anything else is a total delusion and just nonsense isn’t it? 
+
+Because you’re competing with players who have 100k, 500k, +1M of liquid net cashflows after tax and you think you have a fighting chance against that? 
+
+You may have much more than this in cash right now sitting in your one singular bank account, and that’s great! <span style="border-bottom:0.05em solid"><strong>But you’ll know more than most that’s the absolute bar minim isn’t it!?</strong></span>
+
+It’s time to get real. 
+</p><p id="5e210bb3-2431-4213-be13-9d6ad03a5339" class="">The good news is there has <span style="border-bottom:0.05em solid">never been a level playing field opportunity like this before in the history of online business</span>, to not only level up, but now beat big players <span style="border-bottom:0.05em solid">in a matter of months</span>, when you embed a simple and powerful <span style="border-bottom:0.05em solid">AI automated organic client generating machine in your business. </span></p><p id="176caf5d-a407-471b-af22-78309aef46e6" class="">
+</p><p id="fe979e62-66a7-46c2-bae3-f074ade50cd6" class=""><strong><span style="border-bottom:0.05em solid">We’ll show you exactly how.</span></strong>
+</p><figure id="1597a612-06bc-43fe-bed6-35c60d451704" class="image"><a href="static/Screenshot_2023-03-01_at_15.29.06.png"><img style="width:336px" src="static/Screenshot_2023-03-01_at_15.29.06.png"/></a></figure><p id="11f0e6fe-c0bd-473d-a6ad-590d5df61688" class="">
+</p><figure id="62ed6b90-f35b-4a4e-9b6a-91e3831b14a5" class="image"><a href="static/Screenshot_2023-02-26_at_09.11.45.png"><img style="width:1114px" src="static/Screenshot_2023-02-26_at_09.11.45.png"/></a></figure><h2 id="f170ff72-09d5-480a-8bc4-c357c3b3fff4" class="">3. <strong> Remove sales calls from your business entirely to scale your freedom.
+</strong></h2><p id="94c5fda6-5088-4350-b342-af006ee3dd1d" class="">What is the point in building a business if your stuck doing sales calls all day and it’s destroying your freedom? <span style="border-bottom:0.05em solid">Does that even make any sense to you?</span> 
+
+I haven’t done a sales call to sell my high ticket offer in over +3 years. </p><p id="aa38b64a-8b2d-426e-80eb-593e01517291" class="">I’ve never been richer and happier. </p><p id="5540e1b0-bc62-41bc-a5c1-37a04fc1e58e" class="">Neither have my clients who have transitioned to this brand new system of <span style="border-bottom:0.05em solid">NO SALES CALLS</span>. 
+
+That’s because I pioneered a brand new way call the <strong>Jonny OMNI WhatsApp System</strong>. Your at the start of this system it right now by reading this, which means your now on the path to never having to sell your high ticket offers, programs and course (insert your offer) on a telephone ever again too. 
+
+But now with AI, it’s put my <strong>JOWA no sales call business model on steroids,</strong> because if your doing sales calls to sell your offer in 2023 then something is <strong>seriously broken in your business model and is </strong><span style="border-bottom:0.05em solid"><strong>outdated and old.</strong></span><strong> </strong></p><p id="31ab7180-fc5a-4e12-b988-1bf6c640adc0" class="">
+Because anyone still doing “strategy session sales calls” whilst this brand new pioneering JOWA system of no sales calls is available is <span style="border-bottom:0.05em solid">actively choosing the “I want faster horses” option. 
+
+</span><strong><span style="border-bottom:0.05em solid">As in the old way</span></strong><strong>. </strong>Henry Ford put it best: <em><strong>If I had asked people what they wanted, they would have said faster horses.</strong></em>
+</p><figure id="8d29a196-69e7-48d5-8c30-a9e46bb658cb" class="image"><a href="static/Screenshot_2023-03-01_at_17.57.10.png"><img style="width:2146px" src="static/Screenshot_2023-03-01_at_17.57.10.png"/></a></figure><figure id="9cc8162a-dc16-4245-b8de-63a09a78116c" class="image"><a href="static/IMG_9796.jpg"><img style="width:1009px" src="static/IMG_9796.jpg"/></a></figure><p id="80278ed4-8894-47ef-8911-9667a7ea4e3d" class=""><strong>
+It doesn’t mean spending money on paid ads or sitting alone in your house all day doing sales calls </strong><span style="border-bottom:0.05em solid"><strong>“can’t work”</strong></span><strong> because  I </strong><span style="border-bottom:0.05em solid"><strong>“made it work”</strong></span><strong> for years lol! </strong></p><p id="d3376467-b1b5-42b7-8a1a-cb3f36100847" class="">
+</p><p id="dd7b12bb-3ffa-4dc1-84d6-f64d848310de" class=""><strong>But at what cost? </strong></p><p id="a50d6ddc-76e8-4e0a-8f9f-b4b367498b5c" class="">Well that cost is very f****** real isn’t it?  </p><p id="248e9f67-df54-4538-a238-c39576c78045" class="">Especially if your living this reality right now.</p><p id="a3f2f1c2-5128-49fa-96da-5efdcec38f31" class="">
+</p><p id="b5308a6e-bac7-4659-8ba2-5d82a995edb4" class="">As in your spending all your time constantly on calls (to often here NO after giving up a full hour of your time) and/or hiring and managing expensive sales reps with their thirsty commission addiction to your bottom line.</p><p id="f92d900d-c100-43ca-abca-dd578950a719" class="">
+</p><p id="dcd59c6a-9b50-4ee5-a32c-83b1d66c89fb" class="">All of this should be obvious, and yet tens of thousands of online based entrepreneurs live this agonising outdated reality!
+
+If you’ve lived this situation of sales calls you’ll know exactly what I’m talking about, and if you haven’t LUCKY YOU! lol. Because you have the opportunity to save months, even years of your life, not on a telephone listening to mostly tyre kickers <span style="border-bottom:0.05em solid">who were never going to buy your stuff anyway 🧟🧟‍♀️</span><strong>
+
+</strong>Because just know whilst your doing sales calls and/or hiring annoying to manage expensive sales reps who want more and more of your hard earned net as their commissions, <span style="border-bottom:0.05em solid"><strong>my clients and I are doing none of those things and scaling our freedom, because go figure, we’re not spending +8hrs per day on “free strategy session sales calls” lol</strong></span><strong>. </strong>
+ 
+<strong>Remember this:</strong> The best way to optimise a variable isn’t to optimise a variable. It’s complete removal lol. </p><p id="86330f89-9fa8-41a1-82ea-e1ddeb2b5ab6" class="">
+</p><p id="2c981098-2d23-4c0e-89cd-26644d0b54d4" class="">As in removal of expensive paid advertising.</p><p id="7f4634d3-5084-42f3-b75e-d57b5349267a" class="">As in removal of time sucking sales calls</p><p id="86689acf-5ca4-47b7-b18d-34a0c2252fd8" class="">As in removal of annoying to manage sales reps</p><p id="7234dc28-3da0-4ca7-be44-5260d74be60a" class="">
+</p><p id="2162b851-3320-4745-8103-84509631442e" class=""><strong>Removal, not optimise</strong>. Really allow that to sink in.</p><p id="804d5155-9415-4583-a2fa-508dfc633508" class="">
+</p><figure id="c4b4f1f8-1d35-4dc4-8400-d28e5b839e18" class="image"><a href="static/Screenshot_2022-05-11_at_09.16.14.png"><img style="width:1894px" src="static/Screenshot_2022-05-11_at_09.16.14.png"/></a></figure><p id="22183932-bd48-4e3b-96e2-f8437c78be70" class=""><em><strong>Figure:</strong></em><em> Double Dicking Tyre Kickers</em>  🧟‍♀️🧟 </p><p id="95dcbe06-faab-46d8-bc28-4a7db185e8c1" class="">
+</p><p id="cc8aba38-a2c7-4bc8-b39d-bea36e88aeb6" class="">Instead (as in complete contrast) we leverage powerful <strong><span style="border-bottom:0.05em solid">AI automated organic client generating machine in your business + the correct first principles systems</span></strong> that scales your freedom and your bank account simultaneously. 
+</p><p id="c14c1281-0804-4c28-8a25-57eede393c88" class="">A system that <strong>automatically removes tyre kickers</strong> (I call these <em>Double Dicking Tyre Kickers</em>  🧟‍♀️🧟) which leaves you only ever having <strong>responsible adult conversations with high value leads that turn into long term clients as a consistent machines. </strong></p><p id="5d785266-02c6-4a5d-b0be-a257d7eeb26b" class="">
+It means my clients and I don’t sit on “free” strategy sessions for an hour at a time <strong>regurgitating a sales script constantly hearing “I don’t have any money” at the end of most calls!</strong><strong><span style="border-bottom:0.05em solid">
+
+</span></strong>All the while <span style="border-bottom:0.05em solid">giving up the only resource we all never get back which is our TIME right?</span> 
+</p><p id="c474524b-4db5-4c94-857c-6e681041035f" class="">But there is a <span style="border-bottom:0.05em solid"><strong>brand new way</strong></span> that never requires you to be on another sales call ever again. 
+
+<span style="border-bottom:0.05em solid">We’ll show you exactly how you can remove sales calls and reps too</span>, with embedding a simple and powerful AI automated organic client generating machine in your business that removes them by design. </p><p id="f9fcb614-e6f3-4c62-acd2-6d3dda5a29df" class="">
+</p><figure id="5acfe251-5fa4-417b-9d83-3302a68e161f" class="image"><a href="static/Screenshot_2023-02-25_at_19.31.04.png"><img style="width:288px" src="static/Screenshot_2023-02-25_at_19.31.04.png"/></a></figure><figure id="d52f2cdc-cbd1-442e-999a-615eb7dac7a2" class="image"><a href="static/Screenshot_2023-02-26_at_09.17.34.png"><img style="width:576px" src="static/Screenshot_2023-02-26_at_09.17.34.png"/></a></figure><p id="d4f22844-0580-4efc-af73-a11b97c13c74" class="">
+So the brand new <span style="border-bottom:0.05em solid"><strong>3 Non-Negotiable Standards</strong></span> for you are as follows:</p><p id="5a0a569b-9f04-4685-8737-ecc7370ec485" class="">
+1.<strong>Build a war chest of net cash flow of 100,000 USD quickly simply and easily</strong>
+2.<strong>Generate Attention For Free &amp; On Autopilot  </strong>  
+3.<strong>Remove sales calls from your business entirely to scale your freedom</strong></p><p id="35f7d9be-6b14-4945-b512-77d44cd8c640" class="">
+</p><figure id="062966a5-4edf-4359-a031-ccec64da161a" class="image"><a href="static/Screenshot_2023-03-07_at_14.19.21.png"><img style="width:288px" src="static/Screenshot_2023-03-07_at_14.19.21.png"/></a></figure><p id="dc456720-83a6-49f3-919a-e465b3529230" class="">
+</p><p id="a1ab6e5b-1aec-4457-8fc1-8cf42874926b" class=""><span style="border-bottom:0.05em solid">Imagine 12 months from now having 100,000 in the bank (bare minim) </span><strong><span style="border-bottom:0.05em solid">because you turned ON</span></strong><span style="border-bottom:0.05em solid"> a zero to low cost organic client generating system that work’s for you on autopilot and without having to do a single sales call ever again?</span><strong>
+
+</strong>What would that mean for your business and life?</p><p id="b8bfd179-f990-44c6-ad11-87ff808cb858" class="">But to get there doesn’t happen by magic does it..
+
+In actuality, it happens with showing you how to build a growth multiplier in your business that leverages brand new pioneering <strong>AI + ChatGPT + WhatsApp </strong>that<strong> </strong><span style="border-bottom:0.05em solid"><strong>generates huge attention for free</strong></span> which when combined with the correct <strong>First Principle System</strong> can <span style="border-bottom:0.05em solid"><strong>massively scale that free attention.</strong></span>
+
+Lets now cover 3 specific next steps to demonstrate how we make these brand new <strong>non-negotiable standards</strong> real for you, as in a tangible <span style="border-bottom:0.05em solid">“show me so I believe it Jonny”</span> way that is simple, actionable and has real world application right now (today) within your business. </p><p id="48c70c20-b847-4975-801c-bf2591c6f9e0" class="">
+</p><figure id="d9f7ae59-bcf8-4fa1-b5f5-79544f4c5de6" class="image"><a href="static/Screenshot_2023-02-24_at_08.54.28.png"><img style="width:986px" src="static/Screenshot_2023-02-24_at_08.54.28.png"/></a></figure><p id="cf018699-674c-4d0b-bed3-efa2175cdf74" class="">
+</p><figure id="428c468e-43dc-47e7-ba60-f371cdc453f4" class="image"><a href="static/Most_Attractive_Youtube_Thumbnail_(3).png"><img style="width:2240px" src="static/Most_Attractive_Youtube_Thumbnail_(3).png"/></a></figure><h2 id="39374b79-219b-4b05-ab0f-ceb2c3111a13" class="">1. <strong> First Impressions last a lifetime </strong></h2><p id="1871e6c1-01dc-42d9-b192-f2fee0f2adea" class=""><strong>
+</strong>Imagine being able to instantly <strong>s</strong>cale <strong>bespoke world class first impressions through free email </strong>and other various channels at just the click of a button?</p><figure id="2a786863-6e51-491c-a802-37cde01d7b1b" class="image"><a href="static/Screenshot_2023-02-21_at_10.01.49.png"><img style="width:3110px" src="static/Screenshot_2023-02-21_at_10.01.49.png"/></a></figure><p id="2ab8ac15-53eb-49d3-b2c0-ef1d6979f8ad" class="">
+</p><p id="08a0ae03-d7bb-44a0-80eb-d666ddbb44bf" class="">Where you have the skills, technology and system for sending <span style="border-bottom:0.05em solid">AI personalised videos at scale that feel completely custom, but is fully automated and scalable</span>. 
+
+Where you electrify your outbound lead generation by sending your prospects personalised videos and solidifying human relationships instantly.  
+
+Where you send AI personalised videos and see open rates and sales that most can’t even comprehend <strong><span style="border-bottom:0.05em solid">with just a click of a button?</span></strong>
+</p><figure id="303614c8-c4b9-4eae-bcd0-d3e83f36da7b" class="image"><a href="static/Screenshot_2023-02-21_at_10.17.24.png"><img style="width:984px" src="static/Screenshot_2023-02-21_at_10.17.24.png"/></a></figure><p id="3f5ac69f-3887-4035-acdf-9ff781e846cc" class="">
+<strong>Produce a single video and personalise it for tens of thousands of recipients instantly. </strong>
+
+A brand new secret weapon to talk to prospects at scale with a personalised AI approach. 
+</p><figure id="2c46ad77-22f7-431e-965e-15ff02ed89ef" class="image"><a href="static/Most_Attractive_Youtube_Thumbnail_(25).png"><img style="width:1920px" src="static/Most_Attractive_Youtube_Thumbnail_(25).png"/></a></figure><p id="211cf164-e215-4f64-8278-a93d0518ca9c" class="">
+By nurturing human connections at scale by generating videos that look as if you just recorded them one by one all with the power of a <strong>brand new proprietary AI system for pennies. </strong>
+
+As a result your prospects and clients will be blown away. We know that’s true because your reading this right now aren’t you? </p><p id="243f556a-1d6d-4f7f-ac08-eaca2ea75407" class="">
+</p><p id="e07aa9e7-c014-4223-9cf0-84b2ecf358cf" class=""><span style="border-bottom:0.05em solid"><strong>Because you watched a personalised video from me to you in the free email I sent you right? </strong></span>
+
+Could you even tell it was AI enhanced if I hadn’t made you aware it involved this brand new technology? 
+
+Now imagine that exact same system to generate high quality leads on auto pilot for <strong>YOUR</strong> business. 
+
+<span style="border-bottom:0.05em solid">We’ll show you exactly how</span> with embedding a simple and powerful AI automated organic client generating machine in your business too. </p><p id="9ebcee21-5524-4aad-ad2e-b10e676e123a" class="">
+</p><figure id="c6eecfe0-c4b6-4cf9-8b42-370282f0830f" class="image"><a href="static/Screenshot_2023-02-21_at_10.26.22.png"><img style="width:512px" src="static/Screenshot_2023-02-21_at_10.26.22.png"/></a></figure><p id="6196ec66-21be-4400-b810-c226d5f571e4" class="">
+</p><p id="5cf50ee6-8b06-471f-956f-5e1272df4532" class="">Imagine an <span style="border-bottom:0.05em solid"><strong>automated organic client generating machine in you business that works 24/7/365 for you and that wows your prospects, as I’m likely wowing you right now?</strong></span><strong></strong></p><p id="e00640c2-8057-49c1-86c2-73291e27eee7" class="">
+Because there’s no doubt this is one of the best cold emails 📧 you’ve ever received right? 
+
+I don’t say that to be arrogant, because I’m not special (Jonny). It’s because I’m leveraging powerful <strong>AI technology + the correct First Principle System</strong> which removes luck and randomness. </p><p id="0a337b82-87d1-4c34-8e25-dc48985d627f" class="">
+</p><p id="2446e740-7ae5-47fb-9ca6-98ee59ce0f77" class="">It’s simple system that doesn’t rely on human errors or inconsistency.  
+</p><p id="38339ad8-3b75-4c2f-9a71-61842855d31c" class="">It’s not down to me being skilled, it’s down to me leveraging AI technology that is more skilled than any human being on the planet combined lol. 
+
+With that said, this isn’t our first rodeo, and we’ve refined this system and have now put it on steroids with brand new cutting edge <span style="border-bottom:0.05em solid"><strong>AI technology</strong></span> to <span style="border-bottom:0.05em solid"><strong>generate attention for free </strong></span>+ the <span style="border-bottom:0.05em solid"><strong>correct first principles system to scale that free attention indefinitely</strong></span>. 
+
+<strong>Where you can now do things that don’t scale, </strong><span style="border-bottom:0.05em solid"><strong>at scale. </strong></span><span style="border-bottom:0.05em solid">
+</span>
+</p><figure id="eecf5aec-213a-4bca-a4ae-20062e461a7c" class="image"><a href="static/IMG_9740.jpg"><img style="width:1284px" src="static/IMG_9740.jpg"/></a></figure><p id="5c817e6c-758d-4797-b062-28751f7832f8" class="">
+
+This isn’t to give you a playground for the latest AI hype, like generating “avatars” that your audience will instantly know is fake. </p><p id="59e9eb50-cc6d-4fc0-8b1d-247a324205d6" class="">This this is aligning YOU and AI to be in partnership with one another providing your business with a serious and powerful platform to drive <span style="border-bottom:0.05em solid">real world ROI</span>, <span style="border-bottom:0.05em solid">drive your consistent lead generation</span> and <span style="border-bottom:0.05em solid">make sales that actually transforms your life</span> (builds your new war chest of cash).  
+
+Here me now as this can change your entire business life if you internalise it: 
+
+<span style="border-bottom:0.05em solid"><strong>It’s unrealistic to assume as a human being that your going to be able to make a world class first impression every single time you meet someone new. </strong></span>
+
+Because we’ve all have bad days right? 
+
+Where perhaps we could have felt we should have made a better first impression? 
+
+But until now first impressions were left up to chance and/or random unconscious coding and mental wiring that is often stringed together, without any thought or reason. </p><p id="2a9394c6-7689-4232-ad6a-2592aaf8a5f9" class="">
+</p><figure id="0aaab41e-93eb-4418-9637-4d2a279fbb16" class="image"><a href="static/Screenshot_2023-03-01_at_09.57.59.png"><img style="width:1020px" src="static/Screenshot_2023-03-01_at_09.57.59.png"/></a></figure><p id="13736ce2-dd32-4046-baf5-a530d4fda920" class="">
+Don’t believe me? 
+
+Well catch yourself the next time you meet someone new at a party or at the gym and see what your response is to the invariable <strong><span style="border-bottom:0.05em solid">“what do you do”?</span></strong> 
+
+Which is code for, <span style="border-bottom:0.05em solid">why should I listen to you and where should I rank you in my list of prioritise</span>. 
+
+Most humans tend to get by in life (their personal lives) having a random “off the cuff” first impression, that doesn’t have too many negative consequences (especially in context to cash flows), and that’s fine when it’s within that realm of ones personal life. 
+
+But when your in the context of the business world and professionally meeting people for the first time (as in complete strangers) and you don’t nail that consistently each and every time..
+
+Your f***** screwed aren’t you? 
+
+Because a world class first impressions last a lifetime when done correctly, and are one of the single most powerful ways to <span style="border-bottom:0.05em solid">instantly RISE above the noise of your competition and market. </span></p><p id="2cf67b2b-398b-40e3-a353-f944eeffb7d0" class="">
+And just know that whilst you’re applying random 🎨 artisan “changes every time” introductions to complete strangers, with no pre-thought or consideration, others are doing the complete opposite to that by <span style="border-bottom:0.05em solid">leveraging the latest advanced AI technology + the correct first principle system</span> to <strong>scale their attention for free and convert that attention without even having to use a telephone. </strong>
+</p><p id="9c82cd46-067b-4af6-a62b-3db90bb710c4" class="">Because they understand <span style="border-bottom:0.05em solid"><strong>first impressions last a life time don’t they</strong></span><span style="border-bottom:0.05em solid">?</span> </p><p id="993ce327-8166-4c8c-ad75-20f600c717fc" class="">
+</p><figure id="d2790e1c-025c-47b3-9735-810f8d416f2e" class="image"><a href="static/EBD4C4C5-B92B-4A6B-A0F4-20FE98FEDD58.jpeg"><img style="width:384px" src="static/EBD4C4C5-B92B-4A6B-A0F4-20FE98FEDD58.jpeg"/></a></figure><p id="416a6eab-0faf-4a0b-888c-d92e00028d5c" class="">
+</p><figure id="a20eda68-81ba-465b-ba78-cdaa4e2b98fd" class="image"><a href="static/Screenshot_2023-02-26_at_09.31.07.png"><img style="width:1084px" src="static/Screenshot_2023-02-26_at_09.31.07.png"/></a></figure><p id="27310888-fb32-4d11-a1a6-76ef17c5e903" class="">
+The goal isn’t to “trick people with AI”, that’s nonsense isn’t it?
+
+The goal is to align to <span style="border-bottom:0.05em solid">where the world is already going</span> in creating the best personalised first impression of YOU possible, and then scaling that to tens of thousands, hundreds of thousands and even millions of people. 
+
+Really allow this to sink in deeply. </p><p id="94348a88-a541-4d3e-b500-5179b4aa386c" class="">
+</p><p id="2e8552b7-3a82-4795-82f9-498733bbe5e2" class="">But just know whilst you do, thousands more well thought out first impressions are being sent out by my clients and I right now as your reading this lol. 
+
+Because the window to be a f<span style="border-bottom:0.05em solid">irst mover in your market with this technology</span> (works in any market) is closing. Because in the next 12-24 months if you don’t create and scale your first impressions, <span style="border-bottom:0.05em solid">others WILL</span>! 
+
+<strong>Because most people think there is something wrong with them about why their business isn&#x27;t making the amount of money it should be, but in actuality it’s because </strong><span style="border-bottom:0.05em solid"><strong>obscurity is the reason why almost all businesses fail</strong></span><strong>.</strong></p><p id="b4c7049f-3e2c-460f-91ee-401ead5e4b55" class="">
+No one knows who they are. 
+
+AI has now changed that forever, but only for those who are alert and taking action now. 
+<span style="border-bottom:0.05em solid"><strong>Because timing is everything in business</strong></span>. 
+
+Brand new AI technology + the correct First Principles Systems to scale that technology, allows you to scale your attention for free, and the single most powerful way to scale that free attention is through engineering <strong>world class first impressions that last a life time.</strong>
+
+Don’t miss the opportunity to be the first mover of your niche with a<strong> simple powerful system that revolutionise your sales process that generates high value leads that acquires clients on autopilot with powerful brand new technologies of AI.</strong>
+
+<strong>But you have to see it to believe it right..</strong></p><p id="73fbcce7-6399-4370-997b-619f2330582d" class="">
+</p><figure id="2885fd6a-76c3-48eb-819f-e7269f293071"><div class="source"><a href="https://vimeo.com/800763660/cab9dd3d80">https://vimeo.com/800763660/cab9dd3d80</a></div></figure><p id="92bec206-857b-4f14-a65e-42a2b0824e57" class="">
+</p><figure id="ce4d7e78-09df-4d8b-aff5-8690a6dfdcdc"><div class="source"><a href="https://vimeo.com/805403616/05aed07a1b">https://vimeo.com/805403616/05aed07a1b</a></div></figure><figure id="e16c9bbe-7878-4443-a494-9d2045b217dd" class="image"><a href="static/Most_Attractive_Youtube_Thumbnail_(5).png"><img style="width:720px" src="static/Most_Attractive_Youtube_Thumbnail_(5).png"/></a></figure><hr id="5f9b8bda-dc6d-469a-9425-948ddf291be4"/><h2 id="ad6aebc2-a493-44f1-b50a-979ce78a5168" class="">2. <strong>Unlock the Power of Your Knowledge Base with AI Technology</strong>
+</h2><figure id="7855afe9-1cb0-4383-b2d2-e40463b67267" class="image"><a href="static/Screenshot_2023-02-26_at_13.16.59.png"><img style="width:768px" src="static/Screenshot_2023-02-26_at_13.16.59.png"/></a></figure><p id="790ecdc6-31c7-4aea-b8af-aad214c2d563" class="">
+</p><p id="e7cd50d6-5610-436e-b9c8-22b06561c755" class=""><strong>In a world where time is precious and information is abundant, it can be difficult to stand out in a sea of online coaching and consulting products can’t it? 
+
+</strong>Most entrepreneurs, coaches and consultants have an inability to utilize valuable content to its fullest potential within their courses, programs and masterminds. <strong>
+
+</strong>But what if your valuable content could come alive and work for you, even while you sleep?</p><p id="603f4efd-4200-4bb8-9762-adc86f7b171c" class="">
+</p><figure id="1180a92a-00d6-42bf-bb27-3276208c072c" class="image"><a href="static/Screenshot_2023-03-06_at_10.10.41.png"><img style="width:3012px" src="static/Screenshot_2023-03-06_at_10.10.41.png"/></a></figure><figure id="9f071f0a-57d4-485b-b0b1-979d4c5f1be7" class="image"><a href="static/Screenshot_2023-03-09_at_19.15.25.png"><img style="width:2480px" src="static/Screenshot_2023-03-09_at_19.15.25.png"/></a></figure><figure id="ea576819-594a-4f06-a5d8-4ae4f86284f5" class="image"><a href="static/Screenshot_2023-03-01_at_10.17.01.png"><img style="width:1328px" src="static/Screenshot_2023-03-01_at_10.17.01.png"/></a></figure><p id="580e45de-4e6e-4f2f-a37d-03cc557a7f58" class="">
+With the power of Google-level accuracy, your prospects and clients can search through every single piece of your content and <span style="border-bottom:0.05em solid">instantly summarise the results</span>.</p><p id="5ba750f7-afa9-4cc6-bb96-6d8bc282e646" class="">No more wasted hours sifting through program videos – with advanced AI, your prospects and clients can find what they need in a fraction of a second.
+
+It’s a brand new way to unlock the full value of your existing and future products, and the best aspect? <strong>T</strong><span style="border-bottom:0.05em solid"><strong>here&#x27;s no extra work on your part</strong></span><strong>. </strong></p><p id="b71ccb42-ec23-4f14-a13b-dd9fb2978f4f" class="">
+</p><figure id="083157d5-317c-4357-bcc9-760f0607051f" class="image"><a href="static/Screenshot_2023-02-26_at_10.14.42.png"><img style="width:1900px" src="static/Screenshot_2023-02-26_at_10.14.42.png"/></a></figure><p id="adcf0c19-4944-4710-ab6d-c2bc201e65a2" class="">
+You&#x27;ve poured countless hours into creating valuable content via your YouTube channel, course or recorded mastermind but it&#x27;s not being utilised to its fullest potential but <strong>with the power of AI you can instantly reveal the hidden value in your content with </strong><span style="border-bottom:0.05em solid"><strong>just one click</strong></span><strong>.</strong>
+
+You can stop letting your hard work go to waste and start giving your prospects and clients the unique experience they deserve within your online courses, products, mastermind recordings, youtube channels and podcasts. 
+
+<strong>Imagine being able to provide your clients and prospects with the knowledge they need without a second thought? Where it’s done on autopilot for you!</strong></p><p id="8bd2d355-e032-4ed6-aa1e-a001e6be61b7" class="">
+</p><p id="96dd01ec-c9a0-4003-b8fd-d58cd1f4bd1d" class=""><strong>But you have to see it to believe it right..
+</strong></p><figure id="46f6f553-6373-4e89-a733-0814ab27032d"><div class="source"><a href="https://vimeo.com/802382170/1e086f2bf0">https://vimeo.com/802382170/1e086f2bf0</a></div></figure><p id="ee9681f2-6fba-4e32-8345-e966e2b58e8a" class="">
+</p><figure id="1dcde01d-0224-4917-a6da-c2706d099813" class="image"><a href="static/Screenshot_2023-02-14_at_15.00.07.png"><img style="width:384px" src="static/Screenshot_2023-02-14_at_15.00.07.png"/></a></figure><figure id="698eebea-8a62-49d1-a260-9b3ed4c1ae6b" class="image"><a href="static/Screenshot_2023-02-14_at_15.00.20.png"><img style="width:384px" src="static/Screenshot_2023-02-14_at_15.00.20.png"/></a></figure><figure id="0c8e9fcd-4e8e-4fbd-90cf-1a9c03727a97" class="image"><a href="static/Screenshot_2023-02-20_at_10.49.25.png"><img style="width:384px" src="static/Screenshot_2023-02-20_at_10.49.25.png"/></a></figure><figure id="f8b1bd3b-5e31-42c5-b539-51a33e53a77c" class="image"><a href="static/Most_Attractive_Youtube_Thumbnail_(5)%201.png"><img style="width:1760px" src="static/Most_Attractive_Youtube_Thumbnail_(5)%201.png"/></a></figure><hr id="8ddf1d05-0c51-4b49-a5e7-bb2f3c81ce89"/><h2 id="c7380800-9c75-45dd-a824-b48bd4c33202" class="">3. I quit “strategy session” sales calls forever, and you can too..
+</h2><figure id="fd221519-2146-4010-a597-c814ef5880ec"><div class="source"><a href="https://vimeo.com/798089058">https://vimeo.com/798089058</a></div></figure><p id="761b85f3-c048-4686-be76-1939ed33e1d7" class=""><em><strong>Figure:</strong></em><em> It’s not that sales calls or sales reps don’t work, I made them “work” for years, but I don’t believe that’s the highest quality question we should be asking. Because really stop and yourself this question: Are sales calls by way of regurgitating a script the best way for </em><span style="border-bottom:0.05em solid"><strong><em>your prospects</em></strong></span><em> to connect deeply with you and your products and services and become </em><span style="border-bottom:0.05em solid"><strong><em>long term clients?</em></strong></span><em> </em>
+
+If your doing sales calls to sell your offer in 2023 something is seriously broken in your business model isn’t it? 
+
+Most social media platforms today are full of broke people (as in poor or scrapping by) with more followers than money. If you don’t have a large following, that isn’t actually a bad thing, because most who do are dead broke and poor anyway. 
+
+That’s because without the correct <strong>first principle system and business model</strong> your wasting your time, and one core aspect of that business model becoming energising, not exhausting is <span style="border-bottom:0.05em solid"><strong>NO MORE SALES CALLS. </strong></span><strong>
+
+</strong>Where your having to listen to yet another <span style="border-bottom:0.05em solid">double dicking tyre kicker</span> 🧟‍♀️🧟 who says they have <span style="border-bottom:0.05em solid">less than $100 in their bank account</span> after yet another <span style="border-bottom:0.05em solid">+1 hour or more on a call.</span> </p><p id="0d1e8ff9-baa3-4563-8383-9b52fad65f14" class="">Even 30 minutes of listening to their drivel is soul destroying isn’t it? 
+</p><figure id="6753c0a7-3c0a-48d5-9c42-c8adcfedce62" class="image"><a href="static/Screenshot_2023-03-07_at_14.51.30.png"><img style="width:1186px" src="static/Screenshot_2023-03-07_at_14.51.30.png"/></a></figure><p id="692aed0d-e1ed-4082-b094-5866963172fc" class="">
+</p><p id="0fd9dec8-57a8-4d84-bba4-b4a077a7909a" class="">But imagine instead you had a way to bring in revenue while keeping white space on your calendar (no more sales calls ever) so you can work <span style="border-bottom:0.05em solid">ON your business and finally get the scale you’re looking for?
+
+</span>Well that’s not going to come from wasting your time on even more sales calls and/or trying to hire and scale more and more expensive annoying to manage sales reps is it?</p><p id="62b1c396-7e94-4047-a965-623c70187c2e" class="">
+</p><figure id="987ea122-c9d9-4e30-a666-9bc5526c067a" class="image"><a href="static/Screenshot_2023-02-26_at_13.23.58.png"><img style="width:528px" src="static/Screenshot_2023-02-26_at_13.23.58.png"/></a></figure><p id="59fe9f53-8e52-4706-b193-e28fdfd4ccc7" class="">
+</p><p id="1f55fef6-1053-4211-b814-dc808760de8d" class="">I haven’t done a sales call in over +3 years. Neither have my clients. 
+
+That’s because I pioneered the <strong>Jonny OMNI WhatsApp System</strong> which never means you have to sell your high ticket offers, programs and course using sales calls <span style="border-bottom:0.05em solid">ever again</span>. </p><p id="24120a80-b716-4b13-9c13-7ac8cd31c906" class="">
+</p><figure id="891452f0-5d13-4b6b-95b5-383123382c7e" class="image"><a href="static/IMG_9622_2.jpg"><img style="width:432px" src="static/IMG_9622_2.jpg"/></a></figure><p id="d3b6f5e5-f618-405a-b358-ad78bd09a84f" class="">
+It means my clients and I don’t sit on “free” strategy session calls giving up the only resource we all never get back which is our <strong>TIME </strong>right? 
+
+There are two ways we show our clients how to do this. </p><p id="64bc445a-3396-49d7-9c39-eeb66b094e18" class="">
+1 . Via private 1-1 DM and/or 
+2. Group format. 
+
+Both are in complimentary guest batch cohorts that I pioneered over +3 years ago for my clients and I. <span style="border-bottom:0.05em solid">If your reading this, that means you’re at the start of one of our 7 Day Cohorts right now. </span>
+
+Meaning you’ll have the next 24hrs or less to click to join a <strong>Private 1-1 Conversation</strong> with me before your <em><strong><span style="border-bottom:0.05em solid">unique link</span></strong></em> is manually reset and we move to the next on our list of private invites.
+</p><figure id="6c008280-78d4-4618-98f0-638f63b84e86" class="image"><a href="static/IMG_9640.jpg"><img style="width:384px" src="static/IMG_9640.jpg"/></a></figure><p id="7762976d-f53d-4ca0-81a2-52ed7c70edc5" class="">
+</p><p id="33389eed-a0e6-4a83-ab51-fcc41e097f3a" class="">Between 2020 and 2022 we were in <strong>Phase 1</strong> and waiting for AI technology to catch up with our ambition, but on the <strong>30th November 2023 everything changed with OpenAi and ChatGPT</strong>. 
+</p><figure id="fa7c7d1e-3b93-470f-88f0-5ab6e3cf2499" class="image"><a href="static/Screenshot_2023-01-22_at_10.17.06.png"><img style="width:2550px" src="static/Screenshot_2023-01-22_at_10.17.06.png"/></a></figure><p id="54a64efd-29be-41cc-9810-b5de61c7d94b" class="">
+</p><p id="51b9b213-5dcb-4ac1-b0e4-4eced7074c06" class="">Where each of our proprietary 3 phases <strong>always removes YOU from ever needing to be on a telephone ever again to sell you high ticket offers, products and services:</strong>
+
+<strong>Phase 1:</strong> Human + Prospect  via private 1-1 DM and/or Group cohorts <span style="border-bottom:0.05em solid">(zero sales calls)</span>
+<strong>Phase 2</strong>: Human + AI + Prospect <span style="border-bottom:0.05em solid">(zero sales calls)</span> 
+<strong>Phase 3:</strong> AI + Prospect <span style="border-bottom:0.05em solid">(zero sales calls)</span> 
+</p><figure id="b224e600-a939-4b3c-913f-f430b73edc0f"><div class="source"><a href="https://vimeo.com/803436724/bd7951a064">https://vimeo.com/803436724/bd7951a064</a></div></figure><p id="ca0319e4-5ca4-4c3d-8f7d-832eef418d6b" class=""><strong><em>Figure: </em></strong><em>Sam Altman CEO Open AI. I can’t even imagine being on the sidelines of this now as a business owner. Terrifying for those asleep or choosing to ignore what is happening right now (as in today) with AI. </em></p><figure id="82fd3bf5-7fdc-417c-aa62-125d0b330678" class="image"><a href="static/Screenshot_2023-02-21_at_12.19.52.png"><img style="width:896px" src="static/Screenshot_2023-02-21_at_12.19.52.png"/></a></figure><p id="bbd6aec2-a02f-4136-a2ab-2d83982fee00" class=""><em><strong>Figure: </strong></em><em>We’re heading to a brand new world in 2023 and beyond, where</em><em><strong> </strong></em><em>your entire prospect pipeline will be handled in whatsapp via you + advance AI technology. It’s beyond exciting and happening right now, not 5 years from now.
+</em></p><figure id="d09c7a9c-eb79-4b14-a74c-f6813f0b1653" class="image"><a href="static/IMG_9381_2.jpg"><img style="width:288px" src="static/IMG_9381_2.jpg"/></a></figure><p id="61e8d504-2f2c-4359-9313-908145633b75" class=""><em>
+</em>My clients discover how to close high ticket sales <strong>within 7 days or less via WhatsApp</strong> <span style="border-bottom:0.05em solid">without having to use strategy session sales calls ever again</span>. </p><p id="1375d40f-1dec-4a62-883f-5354900f37d7" class="">
+</p><figure id="2ce8e37d-fb06-44ff-a7ae-cafb330cc276" class="image"><a href="static/Screenshot_2023-02-26_at_13.32.21.png"><img style="width:884px" src="static/Screenshot_2023-02-26_at_13.32.21.png"/></a></figure><p id="ac480d8e-f2f0-4413-ae2a-e88e12fc4043" class="">
+But rather than me just describe and explain the pioneering brand new Jonny OMNI WhatsApp System (JOWA) it to you, <strong><span style="border-bottom:0.05em solid">let me show you by way of an exact and specific demonstration..
+</span></strong></p><figure id="7ea67ca7-b31e-4e34-a5e8-190837965b84" class="image"><a href="static/Most_Attractive_Youtube_Thumbnail_(5)%201.png"><img style="width:624px" src="static/Most_Attractive_Youtube_Thumbnail_(5)%201.png"/></a></figure><hr id="ce0e5259-4fde-4052-9740-3597ba413e7e"/><p id="e1d9809b-3742-406d-9f7b-64b18050c4ed" class="">
+</p><figure id="44cf2998-c10f-446e-af5d-870b83ef694e" class="image"><a href="static/4._Two_Sales_Tactics_.png"><img style="width:2560px" src="static/4._Two_Sales_Tactics_.png"/></a></figure><h2 id="32d56619-e12d-4d9e-beba-768f86002108" class="">Whats the Catch? This sounds too good to be true? </h2><p id="234c4a3b-c14a-4611-b191-2f58d27ffffb" class="">
+You’re probably right, it does sound too good to be true. 
+
+And for almost everyone who receives this cold email they’ll assume that and that’s absolutely fine because it’s expected ahead of time. </p><p id="3ea36b9c-ff53-4285-be6f-9276227aaf11" class="">We’re not looking to have conversations with everyone.
+Because the vast majority of people <span style="border-bottom:0.05em solid">don’t want to believe things can be this simple</span>.  
+
+As a rule you may want to try this one on for size yourself..
+
+<span style="border-bottom:0.05em solid"><strong>You don’t waste time and effort on those not curious and open to change!
+</strong></span></p><p id="14922dcc-5f0c-4486-87d6-062c1e069ab3" class="">
+</p><figure id="a1593a0e-4825-4c42-8a4e-6031b014bf3c" class="image"><a href="static/IMG_1068.jpg"><img style="width:384px" src="static/IMG_1068.jpg"/></a></figure><p id="807e00bd-f61c-48cb-95d1-8e4ce8975b4b" class="">
+
+<strong>Instead you focus on those who are well intended, have manners and are open minded because everything else is nonsense.</strong> Effectively adults, who want to grow and develop their business in <span style="border-bottom:0.05em solid">brand new ways</span>. </p><p id="b0adef37-23e1-4adc-af68-9d35ea8bc458" class="">For those types here’s what the next steps of their journey looks like <span style="border-bottom:0.05em solid">specifically and exactly</span>: 
+</p><ul id="a87a694a-e0ea-48e3-8f77-4a17555e18df" class="bulleted-list"><li style="list-style-type:disc">You click the link to join our <strong>Private 1-1 Conversation together</strong> (as in me Jonny, a human) </li></ul><ul id="d5f9522d-d570-4312-9fca-3b669e37e689" class="bulleted-list"><li style="list-style-type:disc">You introduce yourself as outlined in your <strong>Private Invitation</strong> which you received by email</li></ul><ul id="5f536ff7-9205-4511-ae82-8ef2df7c88bc" class="bulleted-list"><li style="list-style-type:disc">We’ll have a conversation that will start with us finding out more about you and the specifics of your business and if this brand new system could be a fit for your particular business and situation. </li></ul><ul id="f6d52acc-3657-4674-812f-2559117288e5" class="bulleted-list"><li style="list-style-type:disc">After we establish that together I’ll provide you with access to my complimentary <strong>Private Bullets Vault</strong> along with an opportunity to access to me for your 7 day cohort where we can see together if our system is a fit for your business. </li></ul><ul id="fc64c310-d1c7-4672-b26c-15dd36326524" class="bulleted-list"><li style="list-style-type:disc">This opportunity of a<strong> brand new automated organic client generating machine using Open AI, ChatGPT &amp; WhatsApp that creates massive attention </strong><span style="border-bottom:0.05em solid"><strong>for free, and scales that free attention indefinitely,</strong></span><strong> </strong>will either make sense to you, or it won’t. Both are fine, it’s why we designed this <strong>Private 1-1 Conversation together. </strong> </li></ul><ul id="3b3a4b5a-2181-4ded-8aaa-0d2e863eaea7" class="bulleted-list"><li style="list-style-type:disc">We don’t do hard selling, go figure we don’t even do sales calls lol. Instead its relaxed but always focused on our <span style="border-bottom:0.05em solid"><strong>3 Non-Negotiable Standards</strong></span> for you which are as follows:</li></ul><p id="d8570b78-6a90-453d-90b6-798c8336f5d8" class=""><div class="indented"><figure id="80c90b65-154a-48d9-a764-73c193cb9df9" class="image"><a href="static/Screenshot_2023-03-07_at_16.32.22.png"><img style="width:636px" src="static/Screenshot_2023-03-07_at_16.32.22.png"/></a></figure></div></p><p id="09e016f9-f4d4-4b1e-a063-047a0fc73819" class="">
+</p><p id="ddd4c1ac-5032-465f-af58-0ae8e3f5fd52" class="">It’s very simple. 
+It’s very matter of fact. 
+
+<strong>It’s </strong><span style="border-bottom:0.05em solid"><strong>exactly how I would want to receive a private invitation</strong></span><strong> to something new and of quality. 
+</strong>
+</p><figure id="a0b8002a-95d1-427e-86c2-0f8fa5afead3" class="image"><a href="static/IMG_0929.jpg"><img style="width:432px" src="static/IMG_0929.jpg"/></a></figure><figure id="f699e7a9-5e8a-4133-a198-007b47c4eceb" class="image"><a href="static/IMG_5662_2.jpg"><img style="width:432px" src="static/IMG_5662_2.jpg"/></a></figure><p id="5a99e746-59df-41e5-b5ce-9e7e722610cf" class="">
+To be frank. I’ve reached stage and season of by professional career (and life) where I don’t do nonsense anymore. I’m sure some of you can relate? 
+
+That means you either “Get It” about the opportunity here to connect and together start to work out if my team and I can help you, or you don’t. 
+
+Both are ok, but this isn’t our first rodeo and we’re only looking to have <strong>high vibrational conversations</strong> with those who really want something more for their business and life and are exhausted in having to try and figure out this enigma we call business all on their own with little to no return for their effort so far. 
+
+Just being real so that we don’t waste either of our time. 
+</p><hr id="760f84b2-f1aa-4f3e-9470-4d0f363b8744"/><h2 id="5ecc99dc-1d74-4144-98ec-c967858c0e74" class="">🪡🧵The Thread To This New AI Era: A Soho House Experience. 
+</h2><figure id="3c43a8d5-14b5-4c25-aeae-09f90af72056" class="image"><a href="static/Screenshot_2023-02-28_at_20.12.07.png"><img style="width:720px" src="static/Screenshot_2023-02-28_at_20.12.07.png"/></a></figure><p id="c1958eae-7fe4-4b36-b26c-ab47500db96b" class="">
+A huge inspiration to me is Nick Jones the founder of Soho House. He built the worlds leading <span style="border-bottom:0.05em solid">private members club</span> from zero to $2.8B valuation. Building a private community is the key to any long term business now online. 
+
+We can learn a huge amount from the <span style="border-bottom:0.05em solid">offline world of best practice</span> and really ensure that <strong>how someone behaves online is matched and aligned to how they behave </strong><span style="border-bottom:0.05em solid"><strong>offline in-person</strong></span><strong>.</strong> 
+
+A private pre-vetted community is everything when it comes to the long term success of your online business. Why is this so important?</p><p id="3dcb8c4d-fcb5-401c-923d-a64b957a93f5" class="">
+</p><p id="553a5f8a-900a-487d-8109-e8b1697d0be9" class="">Because most people assume wrongly that the latest widget, gadget, technical tactical mechanisms of technology is the only thing to win long term in business, yet it’s just the needle 🪡 . The thread 🧵 (or glue) is a <strong>first principles system</strong> to ensure what your creating doesn’t fall apart.  <strong>You need both:</strong>
+
+1. 🪡 Brand new cutting edge AI technology to generate free attention 
+2. 🧵 First Principles System to scale that free attention. </p><p id="64add8a2-e0c8-4dcf-8bc3-3f19b56d5238" class="">
+</p><p id="fc77215c-51f7-4339-9bbc-0be30132208f" class="">And one of the most important parts of that 🧵 <strong>First Principles System is community</strong>. Specifically a private community that acts as the thread of pulling together this powerful brand new AI technology and the end user (who never forget <span style="border-bottom:0.05em solid">are humans</span>)</p><p id="64f6abeb-202a-473b-87bc-a9fb36883ac8" class="">
+</p><figure id="8e60e448-7eda-4aac-921d-2f044b59545a" class="image"><a href="static/Screenshot_2023-03-07_at_16.43.40.png"><img style="width:788px" src="static/Screenshot_2023-03-07_at_16.43.40.png"/></a></figure><p id="0b6eca47-2232-4084-ad58-194e383aeaed" class="">
+</p><p id="6604db60-74f1-4272-a8ca-cb8a63343bfd" class="">Sadly most will only ever end up with needles in their hands because they rushed off to try and self replicate technology ‘hacks and tactics’ and then <span style="border-bottom:0.05em solid"><strong>wondering why months and years later why it didn’t work for them.</strong></span></p><p id="64c04643-8385-4c3e-8f8e-44c02e2986a4" class="">
+</p><p id="da7314c5-b8db-42ec-b094-9f11be2360fc" class=""><strong>Still no +/$100,000 USD minim war chest in their bank account</strong></p><p id="7ce6f4ca-fa46-42dd-a8bd-2fdd08ffa170" class=""><strong>Still struggling to generate consistent leads </strong></p><p id="1f703bb1-4955-4da9-95a1-042ac8c2de0f" class=""><strong>Still on sales calls constantly </strong></p><p id="646c1a0c-aa6a-4402-9659-098a5cc9b49a" class="">
+</p><p id="bc7c8e69-02cc-4f92-ba20-5923f9f57c41" class="">Soho house is the single most successful private community on earth. </p><p id="43d80cb9-11f4-4b54-8d97-0635195ddcd2" class="">No one comes close in its class. 
+
+It’s why so many online entrepreneurs go wrong, they assume just because something is “offline” it must be inherently bad. Not true. In fact there are many things solved offline that we can learn and leverage, and one of those is the standards and expectations of a world class environment like soho house.
+</p><figure id="167ee5db-7982-4a84-b980-c8a58c9b2986" class="image"><a href="static/IMG_9870.jpg"><img style="width:720px" src="static/IMG_9870.jpg"/></a></figure><p id="58946d40-17c2-4457-b8d6-b78075ae2453" class="">
+</p><figure id="95c29a17-0961-4db2-923c-db08dcd8412a"><div class="source"><a href="https://vimeo.com/708299936/b4257365c1">https://vimeo.com/708299936/b4257365c1</a></div></figure><p id="a643ef6f-8225-4026-987e-a556c8749cc4" class=""><em><strong>Figure:</strong></em><em> Nick Jones Founder of Soho House +$2B valuation </em></p><p id="24ae2a74-8e83-4692-9445-34861d11d584" class="">
+</p><figure id="0152224d-6db3-49b8-ad13-1cb3dfe43fed" class="image"><a href="static/IMG_9326.jpg"><img style="width:336px" src="static/IMG_9326.jpg"/></a></figure><figure id="1a5d80aa-5423-4b3f-8e85-3741e36ab712" class="image"><a href="static/IMG_9327.jpg"><img style="width:336px" src="static/IMG_9327.jpg"/></a></figure><figure id="0f492937-010e-4c52-9f87-2c704c06103c" class="image"><a href="static/IMG_9328.jpg"><img style="width:336px" src="static/IMG_9328.jpg"/></a></figure><figure id="1565f4d2-153a-45e2-b804-33229c5ab54b" class="image"><a href="static/IMG_9329.jpg"><img style="width:336px" src="static/IMG_9329.jpg"/></a></figure><figure id="774192af-658d-4ccd-a55e-657b254ef7f4" class="image"><a href="static/IMG_9330.jpg"><img style="width:336px" src="static/IMG_9330.jpg"/></a></figure><figure id="fe75bb2d-51dc-4bd7-81e5-066ba02fc902" class="image"><a href="static/IMG_9331.jpg"><img style="width:336px" src="static/IMG_9331.jpg"/></a></figure><figure id="a7d04529-04fa-4a05-87dd-fc28df7055a6" class="image"><a href="static/IMG_9332.jpg"><img style="width:336px" src="static/IMG_9332.jpg"/></a></figure><figure id="2675ad76-8cca-4901-a42f-daeb93ae2c41" class="image"><a href="static/IMG_9333.jpg"><img style="width:336px" src="static/IMG_9333.jpg"/></a></figure><figure id="d63331ee-963a-40d8-80b8-208a94858f79" class="image"><a href="static/IMG_9334.jpg"><img style="width:336px" src="static/IMG_9334.jpg"/></a></figure><figure id="6874141b-af07-437a-affc-84c839e0b130" class="image"><a href="static/IMG_9335.jpg"><img style="width:336px" src="static/IMG_9335.jpg"/></a></figure><figure id="f5510256-253c-4914-9185-9a1c13ec3d21" class="image"><a href="static/Screenshot_2023-03-05_at_14.14.45.png"><img style="width:336px" src="static/Screenshot_2023-03-05_at_14.14.45.png"/></a></figure><hr id="f88a8f71-a47b-444b-905d-677e47554688"/><h1 id="2604fc85-a95c-43ff-b1ea-14d35b830ace" class=""><strong>My Hourly Rate Is $5,000 USD..</strong></h1><figure id="af46575f-a841-4a6f-80f8-808a7d30e749" class="image"><a href="static/Screenshot_2023-03-02_at_13.08.31.png"><img style="width:1054px" src="static/Screenshot_2023-03-02_at_13.08.31.png"/></a></figure><p id="bf253e38-de12-419a-93ff-518a8c7e8ad5" class=""><strong>My hourly rate is $5,000 usd. </strong>If you don&#x27;t believe me just try hiring me for an hour and you&#x27;ll get the above invoice. It also goes up each year alongside the price of my programs as they are constantly evolving and getting better by the year. 
+
+With that said, respect is earned by way of a<strong><span style="border-bottom:0.05em solid"> consistent and ongoing demonstration of value</span></strong> therefore if someone approaches me and says they can add value to me, the next thing I say is “show me”. As in provide a demonstration that you are relevant and specific to me by way of solving actual problems I’m facing right now in my business, so why should that standard be any different to YOU? </p><p id="6c092ed9-6f52-4e4a-b19a-d619f9f518ae" class="">
+</p><figure id="813ec1d7-2104-499f-87a8-6146366c0bf3"><div class="source"><a href="static/Y2Mate.is_-_Customers_who_buy_10_eBooks_are_not_the_same_as_clients_who_buy_10000_products_lol-XAPerrrci_0-720p-1655066813761.mp4">https://s3-us-west-2.amazonaws.com/secure.notion-static.com/ab2e46a5-3d23-46ef-9224-8d9ad645a052/Y2Mate.is_-_Customers_who_buy_10_eBooks_are_not_the_same_as_clients_who_buy_10000_products_lol-XAPerrrci_0-720p-1655066813761.mp4</a></div></figure><p id="3b73046a-8ed1-48fe-9b59-e30eb5396ffc" class=""><strong>
+
+It’s why access to this private 1-1 conversation, all the coaching that comes with it and platform access via my Private AI Bullets Vault where I&#x27;ll be demonstrating this brand new AI system will be </strong><span style="border-bottom:0.05em solid"><strong>free of charge</strong></span></p><p id="c0122c92-922c-4a1d-beb0-af57dc46aa99" class="">
+<span style="border-bottom:0.05em solid">Because it’s what I would expect myself if some random stranger was reaching out to me with a cold email lol. </span>
+
+The cool thing about being a <strong>product led company </strong>is that through <span style="border-bottom:0.05em solid">specific business model innovation</span> you can build<strong> risk free environments</strong> where pre-selected individuals can enter your business and <strong>hang out and spend quality time with you (the actual founder) in complimentary capacity as a guest</strong> via a <strong>Private 1-1 Conversation</strong>, and just see things for themselves with zero abstraction. </p><p id="bf43503e-a2db-4516-8d9b-255410fa9d0b" class="">
+No BS. </p><p id="d049f80c-c31d-4a4a-937c-22f9c74cb7fd" class="">No fluff. </p><p id="07e7f987-3922-4e71-a2e2-64f8eea415de" class="">Just Value.</p><p id="095ba499-4b37-4b38-946f-7476304cb3f0" class=""> It’s really not that complicated. </p><p id="71d2b58a-32c2-4c2e-bab0-a299e34d622e" class="">
+</p><figure id="6d28c6a4-7de3-4c49-9150-3bf964fd2872" class="image"><a href="static/IMG_9877.jpg"><img style="width:480px" src="static/IMG_9877.jpg"/></a></figure><p id="4b73100d-bbb1-4f42-b05d-8ea28fbf45f9" class="">
+For example, being invited to a <span style="border-bottom:0.05em solid"><strong>private 1-1 conversation with the founder,</strong></span> who has time to do those personal touches and exchanges because<span style="border-bottom:0.05em solid"><strong> their leveraging the pioneering brand new technology + the correct first principles system to scale it</strong></span>.  
+
+When you have the correct technology + systems to scale it then it works for you not against you, allowing you the bandwidth to be fully present and totally dedicated to a <strong>bespoke experience like no othe</strong>r for those prospects who are invited to spend time with you whilst you work out together if it’s a fit for both of you. </p><p id="fb932eda-73fa-4059-a2cb-d88771e05b99" class="">
+</p><figure id="6ee6ea69-0b22-47f6-8b04-2b6746177a0f" class="image"><a href="static/Screenshot_2022-05-09_at_18.49.51.png"><img style="width:2712px" src="static/Screenshot_2022-05-09_at_18.49.51.png"/></a></figure><p id="8878b085-c1b5-4f55-8d2a-a782f9b19d98" class="">
+</p><p id="ac697b87-7fc7-4b6c-829a-b6261b3345ed" class="">This has allowed me to build wonderfully high frequency environments at zero risk to complimentary guests guaranteed because the right types of online entrepreneurs with a <strong>certain level of sophistication already know how to behave, have manners and who really like high quality content, distinctions and insights</strong>. </p><p id="ee662e18-bb6e-46ff-8dee-c2bef8199e57" class="">Their smart, they work out what&#x27;s good and what&#x27;s bad, they don&#x27;t like being ripped off and importantly they go into places and they<strong> </strong><span style="border-bottom:0.05em solid"><strong>know how to behave.</strong></span></p><p id="47625977-2b51-400c-8cfb-6fc71a33d30c" class="">That&#x27;s the key one. </p><p id="862d90da-77e7-4f98-9630-76e3c1f1bcef" class=""><strong>They already know how to behave</strong>. </p><figure id="ca01ff32-67e6-41ed-8a55-32877692844c" class="image"><a href="static/Screenshot_2023-03-02_at_14.42.05.png"><img style="width:866px" src="static/Screenshot_2023-03-02_at_14.42.05.png"/></a></figure><p id="b76ea363-f4d7-4ef7-9d16-ad0d0f02a6cd" class=""><strong><em>Figure:</em></strong><em> It&#x27;s best to imagine that every-time your in a Private 1-1 Conversation with me &amp; have complimentary access to my Bullet Vault your walking into a private space like this together and having some conversations in a relaxed but private high quality environment. No weirdness, just a conversation to better understand you, your business and if my team and I can help. Business doesn’t need to be more complicated than most make it. It&#x27;s </em><em><strong>special, abundant and rare</strong></em><em> oasis amongst the </em><span style="border-bottom:0.05em solid"><em>sea of bullshit, scarcity and fear of online today</em></span><em> who just let anyone near them and whom behave like dick heads. This is a </em><em><strong>dick head free zone. </strong></em><em>Just say&#x27;n so we&#x27;re super specific and clear right upfront.</em></p><p id="c8ba7a43-f2ac-46de-b606-fb60cad73354" class="">
+</p><figure id="789f6ddc-5e79-45ec-a540-f4626c30e075" class="image"><a href="static/Screenshot_2023-03-02_at_14.45.22.png"><img style="width:864px" src="static/Screenshot_2023-03-02_at_14.45.22.png"/></a></figure><p id="898b5e26-28b8-4de1-a35e-09dc3235db4b" class=""><em><strong>Figure: </strong></em><em>Offline environments are </em><em><strong>very effective starting points to apply deductive logic</strong></em><em> </em><em><strong>of first principles</strong></em><em> when correctly resetting very abstract online environments which have become very confused and lost about </em><span style="border-bottom:0.05em solid"><em>how to function and behave properly and really allows the right vibrancy of online entrepreneurs to achieve the results they&#x27;re looking for long term</em></span><em>. Don&#x27;t worry we </em><em><strong>invert </strong></em><em>the entire status quo here because most of it is riddled with abstractions.</em></p><p id="8cf19a59-ee21-41f7-be64-e3d4a52c70ba" class="">
+</p><figure id="d5fab97b-0aa6-40ad-8604-0f96e10fbf64" class="image"><a href="static/IMG_1020.jpg"><img style="width:1284px" src="static/IMG_1020.jpg"/></a></figure><p id="6acebe5b-4915-4306-9e03-4e194a81ff24" class=""><em><strong>Figure: </strong></em><em>The business model that you choose might be one of the most important decisions you ever make in business. Because it’s been my observation that most entrepreneurs constantly fail to realise that they can </em><strong><span style="border-bottom:0.05em solid"><em>design their business however they like</em></span></strong><em>. </em></p><p id="58b41a20-9611-41c4-a044-d1c1f1d3e63e" class="">
+</p><figure id="6f93aa22-845e-43d6-9da5-48520c84f384" class="image"><a href="static/IMG_1105.jpg"><img style="width:384px" src="static/IMG_1105.jpg"/></a></figure><p id="c1680052-1e34-434b-821c-6a694f7dff0a" class="">
+With the correct business model of brand new AI technology + the correct first principle systems to scale it, you have the opportunity to provide ongoing perks to your markets. 
+
+Like daily complimentary access to consulting for free where I give up anywhere between <strong>1-2 hrs most days (so around +/$5-10,000 usd) </strong>to support pre-selected guests in<strong> Private 1-1 Conversations</strong> to see how I can help.  
+</p><p id="029955a8-e10e-4295-beeb-422e250957e2" class="">I&#x27;m confident once you start to dive into the <strong>Private Bullets Vault</strong> you&#x27;ll begin to see just how valuable this opportunity to spend time with me and the brand new work we’re doing here, really is.  </p><figure id="30500ccf-2d9e-4977-a74d-064705d8b1c1" class="image"><a href="static/IMG_5660_4.jpg"><img style="width:384px" src="static/IMG_5660_4.jpg"/></a></figure><p id="12128d92-ba2b-4d0f-b721-bbfa0f46e8e2" class="">
+</p><p id="ad73d451-02da-4393-ba3a-389c5be094ab" class="">But obviously for this <strong>brand new system to work</strong> there&#x27;s simple, but important expectations and standards that are made explicit ahead of time, because otherwise we don’t have the correct context or environment to make simple but critical decisions about the direction of where your taking your business next. 
+</p><figure id="65f2f64b-d8d6-427b-a35c-d925c49881e5" class="image"><a href="static/sohohouse-barcelona-nov18-pr.jpg"><img style="width:2040px" src="static/sohohouse-barcelona-nov18-pr.jpg"/></a></figure><p id="88f37888-5971-4f15-b58e-1ae8009bcaa8" class="">
+</p><p id="4db9d4eb-2508-4224-8903-8f5ef03a513e" class="">Because I hold myself accountable to the promise that <strong>what you are about to experience throughout your complimentary 7 days here is like nothing you’ll have experienced before in business. Where  my free content and consultation is better than most paid programs out there today. </strong></p><figure id="f5d942b9-20cc-4b84-9c8d-3b0b8e5b6867" class="image"><a href="static/Screenshot_2023-03-02_at_13.17.57.png"><img style="width:1406px" src="static/Screenshot_2023-03-02_at_13.17.57.png"/></a></figure><p id="5b537462-2876-46e5-8d94-41be48a8c353" class=""><strong>The Promise: </strong>That my free content (Bullets) is better than any other paid program that&#x27;s out there today. </p><figure id="2be797f4-8031-48e0-92db-6762671d1c90" class="image"><a href="static/Screenshot_2023-03-07_at_16.55.01.png"><img style="width:432px" src="static/Screenshot_2023-03-07_at_16.55.01.png"/></a></figure><p id="10edd494-8229-430c-b107-5e39e7fac1d8" class="">
+There are only 3 Rules during our time together in your <strong>7 Day Private 1-1 WhatsApp Conversation</strong>:
+</p><ol type="1" id="6e4254ff-2cc5-4a67-8f6e-0892f9cafc0c" class="numbered-list" start="1"><li><strong>Be mannerly and demonstrate high etiquette at all times</strong></li></ol><ol type="1" id="027b7cb4-9680-4ca7-9e0b-df853ed87d6d" class="numbered-list" start="2"><li><strong>Ask specific questions</strong></li></ol><ol type="1" id="7c183445-fa53-410f-9c47-963a692111db" class="numbered-list" start="3"><li><strong>Be open minded and curious to the raising your financial standards and alternative perspectives and beliefs around what’s possible for you and your business right now.</strong></li></ol><p id="17660d07-dabb-454b-94bd-7781eef7e472" class=""> </p><hr id="8ae8dc90-913b-4ffb-b9ea-6aacf2cdfa6d"/><figure id="0209eb5d-6c7c-4b89-8294-e528a0f94163" class="image"><a href="static/8170eda8-cb5d-420d-8f82-85c9b0ea5d5f.jpg"><img style="width:2048px" src="static/8170eda8-cb5d-420d-8f82-85c9b0ea5d5f.jpg"/></a></figure><h2 id="f1b4459f-2f87-4eb9-b542-87f8568186b5" class="">Cool but who the f***** are you and why should I listen to you?  </h2><p id="72bb040a-b317-4189-a9e6-b255572b47a1" class="">
+I’m Jonny. 
+I’m Scottish and age 37.
+I live in Dubai (lived in London, Sydney, Barcelona, Marbella &amp; Toronto before that). 
+I’ve never been married (single) and have no kids. 
+I’ve made over +3M in sales for my clients without sales calls. I will take this system to +10M in the next 1-3 years. 
+I like to read, go to the gym and work. 
+A personal goal of mine is to get my first dog. 
+</p><hr id="eb753660-e20e-4fe3-8a56-989e10615c89"/><h2 id="87cde8e1-c8d4-4702-b801-a30841365086" class="">I’ve had over +56 mentors over the last +10 years in business </h2><p id="2d6960fc-d279-47e2-a71a-d6baf77acb68" class="">
+</p><figure id="8eded355-4cf3-4d78-9114-6ad789a5c57c"><div class="source"><a href="https://vimeo.com/803828326/91d82aff88">https://vimeo.com/803828326/91d82aff88</a></div></figure><p id="9208b87f-908d-442b-8af6-d881380aff5c" class="">
+</p><p id="578ebf22-078e-46c3-9405-f0aad1b73af2" class="">Whether it be privately 1-1, in a group format of a  mastermind or via their courses or programs. Everyone of my business and personal growth mentors have influenced who I am today. 
+
+All of been fantastic in their respective disciplines, but there has been a common denominator that not one of them truly solved and that <span style="border-bottom:0.05em solid">I had to figure it out on my own after years of pain, frustration and iteration:</span>
+
+<span style="border-bottom:0.05em solid"><strong>How to never have to worry about lead generation for your business ever again.</strong></span>
+
+None of my mentors over the last +10 years had a<strong><span style="border-bottom:0.05em solid"> </span></strong>long term answer to this problem. <span style="border-bottom:0.05em solid">Not one of them</span>. I don’t blame them for that, as some of their strategies and tactics worked for a time, but really for those that aren’t in a position to spend lots of money to acquire clients have <strong>always been previously penalised</strong> by not having large resources to constantly spend on the hamster wheel of paid advertising, and this was the answer most of my mentors gave repeatedly:  
+
+<strong>”You have to spend money to make money and/or just spend more on paid ads!”</strong>
+
+This is made worse by the fact many (including myself) believed they needed to spend countless hours making youtube videos, answering questions in facebook groups hoping to get noticed or “pounding the pavements” making cold calls to get clients. Or they waste time doing “content marketing” and building complex sales funnels hoping and praying that new clients come to them.
+
+But now with <span style="border-bottom:0.05em solid">brand new AI technology to generate attention for free</span> + <span style="border-bottom:0.05em solid">the correct first principle systems to scale that free attention</span>, <strong>there has never been this opportunity before</strong>. 
+</p><figure id="cae9d8b9-459e-4dc1-b57b-a4434a1a136e" class="image"><a href="static/Screenshot_2023-03-02_at_12.20.12.png"><img style="width:432px" src="static/Screenshot_2023-03-02_at_12.20.12.png"/></a></figure><p id="bd774f35-e77a-4439-a267-4706d00e28d6" class=""><strong><em>Figure: </em></strong><em>Who have been you’re past mentors? Anyone from my list. How was your experience? Did you get the lead generation and sales results you wanted long term? </em></p><p id="6f8075d3-c1bc-4993-a7aa-3b348eb00f14" class="">
+</p><figure id="57e3e41f-3e27-412f-8d51-17ae40af6978"><div class="source"><a href="https://vimeo.com/807220371/8e82efc894">https://vimeo.com/807220371/8e82efc894</a></div></figure><p id="af9929bf-932d-434c-85ed-d4f0ad863bf0" class="">
+</p><hr id="f4046dcc-54fd-4903-ba74-274e44974d7e"/><figure id="2d20d069-7cba-4b88-97f1-f93cd7e9765f" class="image"><a href="static/IMG_9714.jpg"><img style="width:1284px" src="static/IMG_9714.jpg"/></a></figure><p id="561c8d7f-d2f3-492b-83b9-3eb6d4eda59d" class=""><strong><em>Figure: </em></strong><em>My home in Dubai ✍🏼. A belief I’ve had for a long time now is that minimalism + stoicism are helpful paradigms when building your business with a long term mindset. 
+ </em></p><figure id="ab75c54f-40bd-4e7e-979f-54c335f90fb0" class="image"><a href="static/Screenshot_2023-02-28_at_18.40.38.png"><img style="width:1758px" src="static/Screenshot_2023-02-28_at_18.40.38.png"/></a></figure><figure id="52e4eaeb-2ef2-4493-aacc-bd7520016b26" class="image"><a href="static/Screenshot_2023-02-28_at_18.40.43.png"><img style="width:768px" src="static/Screenshot_2023-02-28_at_18.40.43.png"/></a></figure><p id="cb027db2-ec64-4819-9b3f-681eb522677c" class=""><strong><em>Figure: </em></strong><em>My life is simple. Wake up at 4am. Work 3x5 hr blocks at my desk. Go to the gym. Bed. The first thing we do is tidy up both your professional and personal because how you do one thing is how you do almost everything else. Less is more, we simplify everything first. 
+</em></p><figure id="12c63e8f-1ec0-4245-a394-1a74d2a8435b"><div class="source"><a href="https://vimeo.com/803110068/96b87fa648">https://vimeo.com/803110068/96b87fa648</a></div></figure><p id="8696e8b9-4a21-4963-adc6-12f9cf0f5e7d" class=""><strong><em>Figure: </em></strong><em>Working hard in life is always required, anyone who tells you any different is speaking utterly twaddle and nonsense. But how you choose to get to your desired outcomes and results is 100% a choice. </em></p><hr id="508f5324-2fb0-47ee-9837-07aacbbe8d9b"/><h1 id="43617525-2ca8-43e2-8ca5-092f2fc3c559" class="">Ok Jonny, this is brand new, unique and really exciting me. You have my attention so what’s next? </h1><p id="e25154b6-3f5f-4f9f-86b7-73ae6ea5e38a" class="">
+<strong>Access to this Private 1-1 Conversation, all the coaching that comes with it and a demonstration of this power AI driven system via my Private AI Bullets Vault will be </strong><span style="border-bottom:0.05em solid"><strong>free of charge.
+
+</strong></span>However, your private invitation link will <strong>only be available for</strong> <strong>the next 24hrs </strong>only before I manually reset the link and we move to the next on our list of invites. 
+
+Specifically <span style="border-bottom:0.05em solid">you won’t get a response should you miss this deadline</span> as the opportunity is a <span style="border-bottom:0.05em solid">first come first served basis</span> and I cap the number of conversations to maintain quality and exceed the experience for each of our guests during our time together. 
+
+Please also remember that I won’t know you’ve arrived into our <strong> Private 1-1 Conversation until you have introduced yourself. Please ensure it’s in the following format </strong>
+</p><ul id="640d10b2-24eb-4fb5-a352-2a005310577d" class="bulleted-list"><li style="list-style-type:disc">Full Name</li></ul><ul id="138066c6-d5a3-4498-bcda-fa685f86f5ed" class="bulleted-list"><li style="list-style-type:disc">Your Niche</li></ul><ul id="1c8ffc78-96b2-431a-9c40-40db1af5b093" class="bulleted-list"><li style="list-style-type:disc">Purpose Behind Your Business</li></ul><ul id="5899ca8c-533b-45dd-9887-255faba151a5" class="bulleted-list"><li style="list-style-type:disc">Your Current &amp; Desired Situation</li></ul><ul id="75002819-ac04-408e-9ee1-cfcef8dbc6de" class="bulleted-list"><li style="list-style-type:disc">Where You&#x27;d Like To Be 12 Months From Now</li></ul><ul id="0af1eca1-6f0d-4f1e-994b-393c654546db" class="bulleted-list"><li style="list-style-type:disc">Your Current Business Monthly Revenue </li></ul><ul id="e81fe218-7f9c-4cad-b374-26eb663e2b8a" class="bulleted-list"><li style="list-style-type:disc">How Your Currently Generating Leads &amp; Making Sales
+</li></ul><p id="357adc80-1f9b-4659-8be2-2f60de4c6572" class="">See you on the other-side. 
+
+</p><figure id="17b82697-10ab-4379-8962-83b86f94119b" class="image"><a href="static/IMG_0202_2.jpg"><img style="width:384px" src="static/IMG_0202_2.jpg"/></a></figure></div></article></body></html>
